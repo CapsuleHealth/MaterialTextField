@@ -357,7 +357,8 @@ static NSTimeInterval const MFDefaultAnimationDuration = 0.3;
         underlineColor = self.errorColor;
     }
     else {
-        underlineColor = self.isFirstResponder ? self.tintColor : self.underlineColor;
+        UIColor * focusedUnderlineColor = self.focusedUnderlineColor ?: self.tintColor;
+        underlineColor = self.isFirstResponder ? focusedUnderlineColor : self.underlineColor;
     }
 
     self.underlineLayer.backgroundColor = underlineColor.CGColor;
