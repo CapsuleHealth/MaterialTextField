@@ -61,6 +61,11 @@ IB_DESIGNABLE
 @property (nonatomic) IBInspectable UIColor *underlineColor;
 
 /**
+ * The color of the underline when the text field is in focus.
+ */
+@property (nonatomic) IBInspectable UIColor *focusedUnderlineColor;
+
+/**
  * To display an error under the text field, provide an NSError with a localized description.
  *
  * @param animated Set to YES to animate showing & hiding the error message.
