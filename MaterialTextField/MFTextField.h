@@ -97,4 +97,9 @@ IB_DESIGNABLE
  */
 @property (nonatomic) IBInspectable CGFloat errorPadding;
 
+/**
+ * The text that is displayed above the text field when there is input.
+ */
+@property (nonatomic) NSString *floatingLabelText;
+
 @end

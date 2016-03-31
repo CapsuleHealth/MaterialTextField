@@ -195,6 +195,12 @@ static NSTimeInterval const MFDefaultAnimationDuration = 0.3;
     [self updateDefaultPlaceholderFont];
 }
 
+- (void)setFloatingLabelText:(NSString *)floatingLabelText
+{
+    _floatingLabelText = floatingLabelText;
+    [self updatePlaceholderText];
+}
+
 - (void)setPlaceholder:(NSString *)placeholder
 {
     [super setPlaceholder:placeholder];
@@ -478,7 +484,8 @@ static NSTimeInterval const MFDefaultAnimationDuration = 0.3;
 
 - (void)updatePlaceholderText
 {
-    self.placeholderLabel.text = self.placeholder ?: self.placeholderAttributedString.string;
+    NSString * actualPlaceholder = self.placeholder ?: self.placeholderAttributedString.string;
+    self.placeholderLabel.text = self.floatingLabelText ?: actualPlaceholder;
     [self.placeholderLabel sizeToFit];
     [self invalidateIntrinsicContentSize];
 }
