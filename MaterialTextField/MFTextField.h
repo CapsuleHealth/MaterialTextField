@@ -103,9 +103,4 @@ IB_DESIGNABLE
  */
 @property (nonatomic) NSString *floatingLabelText;
 
-/**
- * The text that is displayed above the text field when there is input.
- */
-@property (nonatomic) NSString *floatingLabelText;
-
 @end
